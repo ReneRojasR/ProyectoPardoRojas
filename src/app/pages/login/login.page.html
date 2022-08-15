@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-list>
+      <ion-radio-group value="">
+        <ion-list-header>
+          <ion-label>Tipo de Usuario</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Pasajero</ion-label>
+          <ion-radio slot="start" value="pasajero"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Chófer</ion-label>
+          <ion-radio slot="start" value="chofer"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-button strong="True" type="submit" color="primary" shape="round" [routerLink]="['/main-menu']">Aceptar
+        </ion-button>
+        <ion-button type="clear" color="danger" shape="round">Borrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <!--APRENDER A USAR CSS-->
+  <!--Hacer Pagina 2-->
+  <a class="text ion-text-center" [routerLink]="['/pagina3']">Registrarse</a>
+
+</ion-content>
