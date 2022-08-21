@@ -8,11 +8,11 @@
   <form>
     <ion-item>
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input [(ngModel)]="usuario"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" [(ngModel)]="clave" required></ion-input>
     </ion-item>
     <br>
     <ion-list>
@@ -44,3 +44,5 @@
   <a class="text ion-text-center" [routerLink]="['/pagina3']">Registrarse</a>
 
 </ion-content>
+ion-input [(ngModel)]="usuario"
+ion-input type="password" [(ngModel)]="clave"
