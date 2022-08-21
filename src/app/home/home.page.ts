@@ -7,14 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  usuario: string = "Desconocido";
-  clave: string = "";
-
   constructor() {}
 
-  
-  item: any = {
-    imagen:"",
-    icono:"",
-  }
 }

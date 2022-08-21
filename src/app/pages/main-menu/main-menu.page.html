@@ -1,27 +1,53 @@
-<ion-header>
+<ion-header class="back">
   <ion-toolbar>
-    <ion-title>Bienvenido Oscar</ion-title>
-
-    
-    <ion-menu side="end" menuId="first" contentId="main">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Start Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-icon name="person-circle-outline"[routerLink]="['/info']"></ion-icon>
+<ion-content class="back">
+  <br>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="4"></ion-col>
+    <ion-col size="8">
+      <ion-avatar [routerLink]="['/info']">
+        <img
+          src="https://e7.pngegg.com/pngimages/518/64/png-clipart-person-icon-computer-icons-user-profile-symbol-person-miscellaneous-monochrome.png">
+      </ion-avatar>
+      <p>Usuario Recibido: {{ u }}</p>
+      <p>Clave Recibida: {{ c }}</p>
+    </ion-col>
+  </ion-row>
+  
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Sede a la que irà">
+        <ion-select-option value="plazaNorte">Plaza Norte</ion-select-option>
+        <ion-select-option value="Alameda">Alameda</ion-select-option>
+        <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
+        <ion-select-option value="Maipù">Maipù </ion-select-option>
+        <ion-select-option value="Melipilla">Melipilla</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+  <ion-item>
+    <ion-label position="floating">Lugar por el que pasarà</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label position="floating">Lugar de inicio</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" shape="round" color="primary">Programar Viaje</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" color="secondary" shape="round">Buscar</ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>

@@ -1,32 +1,41 @@
-<ion-header>
+<ion-header class="toolbar">
   <ion-toolbar>
-    <ion-title>Informacion</ion-title>
     <ion-buttons slot="start">
       <ion-back-button>Volver</ion-back-button>
     </ion-buttons>
-
-    <!--MENU-->
-    
-
   </ion-toolbar>
-  
 </ion-header>
 
-<ion-content>
-  
-  
-  <ion-avatar  >
-    <img src="https://e7.pngegg.com/pngimages/518/64/png-clipart-person-icon-computer-icons-user-profile-symbol-person-miscellaneous-monochrome.png" >
-  </ion-avatar>
+<ion-content class="back">
   <br>
-  <ion-label>Nombre: Oscar Ascevedo Ascevedo</ion-label>
-  <br>
-  <ion-label>Direccion: Las Manos de tu papá 123</ion-label>
-  <br>
-  <ion-label>Sede: Plaza norte</ion-label>
-  <br>
-  <ion-label>Fecha nacimiento: 04 de Agosto 1996</ion-label>
-  <br>
-  
-  
+  <ion-row>
+    <ion-col size="4"></ion-col>
+    <ion-col size="8">
+      <ion-avatar>
+        <img
+          src="https://e7.pngegg.com/pngimages/518/64/png-clipart-person-icon-computer-icons-user-profile-symbol-person-miscellaneous-monochrome.png">
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>Enrique Mallea</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Sede: Plaza Norte</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Numero: 9 7640 1965</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Vehìculo: Motocicleta</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
