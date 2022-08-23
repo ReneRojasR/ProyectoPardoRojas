@@ -12,6 +12,10 @@ export class LoginPage implements OnInit {
   usuario: string;
   clave: string;
 
+  item: any ={
+    pic: "assets/waypoint.png"
+  }
+
   constructor(public toastController: ToastController, private router: Router, private alertController: AlertController) { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-<ion-header class="toolbar">
+<ion-header class="body">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button>Volver</ion-back-button>
@@ -6,20 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="back">
+<ion-content class="body">
   <br>
-  <ion-row>
-    <ion-col size="4"></ion-col>
-    <ion-col size="8">
-      <ion-avatar>
-        <img
-          src="https://e7.pngegg.com/pngimages/518/64/png-clipart-person-icon-computer-icons-user-profile-symbol-person-miscellaneous-monochrome.png">
-      </ion-avatar>
-    </ion-col>
-  </ion-row>
+  <ion-img [src]="item.pic" class="perfil"></ion-img>
   <ion-card class="card">
     <ion-card-header>
-      <ion-card-title>Enrique Mallea</ion-card-title>
+      <ion-card-title class="text2">Enrique Mallea</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>

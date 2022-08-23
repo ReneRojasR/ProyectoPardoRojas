@@ -27,6 +27,34 @@ const routes: Routes = [
     path: 'main-menu',
     loadChildren: () => import('./pages/main-menu/main-menu.module').then( m => m.MainMenuPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'buscar',
+    loadChildren: () => import('./pages/buscar/buscar.module').then( m => m.BuscarPageModule)
+  },
+  {
+    path: 'programar',
+    loadChildren: () => import('./pages/programar/programar.module').then( m => m.ProgramarPageModule)
+  },
+  {
+    path: 'resultados',
+    loadChildren: () => import('./pages/resultados/resultados.module').then( m => m.ResultadosPageModule)
+  },
+  {
+    path: 'edit-vehiculo',
+    loadChildren: () => import('./pages/edit-vehiculo/edit-vehiculo.module').then( m => m.EditVehiculoPageModule)
+  },
+  {
+    path: 'add-vehiculo',
+    loadChildren: () => import('./pages/add-vehiculo/add-vehiculo.module').then( m => m.AddVehiculoPageModule)
+  },
+  {
+    path: 'edit-perfil',
+    loadChildren: () => import('./pages/edit-perfil/edit-perfil.module').then( m => m.EditPerfilPageModule)
+  },
 ];
 
 @NgModule({
