@@ -1,0 +1,34 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <br>
+  <ion-img [src]="item.pic" class="perfil"></ion-img>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="text2">{{ m }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Sede: {{ s }}</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Numero: {{ n }}</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label [routerLink]="['/edit-vehiculo']">Vehìculo: Motocicleta</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" shape="round" color="secondary" [routerLink]="['/edit-perfil']">
+    Editar perfil</ion-button>
+</ion-content>

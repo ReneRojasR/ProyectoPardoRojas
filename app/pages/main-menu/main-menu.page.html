@@ -1,0 +1,19 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body ">
+  <div id="container">
+    <br>
+    <ion-img [src]="item.pic" class="perfil" [routerLink]="['/info']" (click)="pasarDatos()"></ion-img>
+    <br>
+    <br>
+    <ion-button expand="block" shape="round" color="primary" [routerLink]="['/programar']">Programar Viaje</ion-button>
+    <br>
+    <ion-button expand="block" color="secondary" shape="round" [routerLink]="['/buscar']">Buscar vehiculo</ion-button>
+  </div>
+</ion-content>

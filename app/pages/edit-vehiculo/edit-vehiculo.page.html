@@ -1,0 +1,39 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <div id="container">
+    <ion-img [src]="item.pic" class="auto"></ion-img>
+    <ion-list>
+      <ion-item>
+        <ion-select class="text" placeholder="Vehiculo">
+          <ion-select-option value="1">KC YS 76</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-item>
+        <ion-select class="text" placeholder="Seleccione el numero de asientos disponibles">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="5+">Más de 5</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-button strong="True" expand="full" type="submit" color="primary" shape="round" [routerLink]="['/succes']">
+      Aceptar</ion-button>
+    <br>
+    <ion-button class="center" strong="True" type="submit" color="secondary" shape="round"
+      [routerLink]="['/main-menu']">Cancelar</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-content class="body">
+  <br>
+  <br>
+  <div id="container">
+    <ion-img [src]="item.pic" class="logo"></ion-img>
+    <br>
+    <ion-item>
+      <ion-label position="floating" class="text">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario" class="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" class="text">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="clave" class="text"></ion-input>
+    </ion-item>
+    <br>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-button strong="True" expand="full" color="primary" shape="round"
+          [routerLink]="['/main-menu']" (click)="pasarDatos()">Aceptar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <br>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="4"></ion-col>
+    <ion-col size="8">
+      <a [routerLink]="['/registro']">Registrarse</a>
+    </ion-col>
+  </ion-row>
+</ion-content>
