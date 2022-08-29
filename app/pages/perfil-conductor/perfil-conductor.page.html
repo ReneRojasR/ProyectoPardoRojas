@@ -8,18 +8,22 @@
 </ion-header>
 
 <ion-content class="body">
-  <img src="assets\icon\mclaren-chino-rios-e1508906085286.jpg" class="perfil"/>
-   
-  <h2 class="text">Informacion del auto</h2>
-  <label for="" class="text">Marca: Autokalo</label><br>
-  <label for="" class="text">Modelo: Kagao</label><br>
-  <label for="" class="text">Color: Nranjo</label>
+  <ion-card class="card">
+    <ion-card-content>
+      <h1 class="text2">Vehiculo</h1>
+      <ion-img [src]="item.pic2" class="info"></ion-img>
 
-  <h2 class="text">Informacion del conductor</h2>
+      <label for="" class="text3">Marca: Autokalo</label><br>
+      <label for="" class="text3">Modelo: Kagao</label><br>
+      <label for="" class="text3">Color: Nranjo</label>
+    </ion-card-content>
+  </ion-card>
 
-    <img src="assets\icon\vidal.png" class=""/>
-
-  <label for="" class="text">Nombre: Arturo Vidal</label>
-  
-
+  <ion-card class="card">
+    <ion-card-content>
+      <h1 class="text2">Conductor</h1>
+      <ion-img [src]="item.pic" class="perfil"></ion-img>
+      <label for="" class="text3">Nombre: Arturo Vidal</label>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

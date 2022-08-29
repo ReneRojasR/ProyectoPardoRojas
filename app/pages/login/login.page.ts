@@ -29,15 +29,42 @@ export class LoginPage implements OnInit {
     toast.present();
   }
 
-  pasarDatos(){
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      subHeader: 'Usuario o contraseña invalido',
+      message: 'Intente de nuevo',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+  validar(){
     let navigationExtras: NavigationExtras = {
       state: {
         usu:this.usuario,
         contra:this.clave
       }
     }
-    this.presentToast();
-    this.router.navigate(['/main-menu'], navigationExtras);
-  }
+    let re = /@duocuc.cl/;
 
+    if(re.test(this.usuario)==false){
+      this.presentAlert();
+    }
+    else if(!this.clave){
+      this.presentAlert();
+    }
+    else if(this.usuario.length<14){
+      this.presentAlert();
+    }
+    else if(this.clave.length<8){
+      this.presentAlert();
+    }
+    else{
+      this.presentToast();
+      this.router.navigate(['/main-menu'], navigationExtras);
+    }
+  }
+// ME QUIERON PURO MATAR HERMANO, ME DEMORÉ COMO 3 HORAS EN HACER LAS VALIDACIONES
 }

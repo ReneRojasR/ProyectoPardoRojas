@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #38ff26;
+  --ion-color-primary: #38ff26ea;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #000000;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -31,8 +31,10 @@
     --ion-background-color: rgb(21, 22, 21);
   }
   .card {
-    --ion-background-color: #38ff26;
+    --ion-background-color: #42ee33;
     --ion-color-primary-shade: #322eff;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .text {
     color: white;
@@ -41,6 +43,10 @@
     color: #000000;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
+  }
+  .text3{
+    color: #000000;
+    font-size: medium;
   }
   .logo {
     height: 150px;
@@ -53,14 +59,22 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 37%;
   }
   .auto{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 200px;
+    height: 175px;
     width: 265px;
+  }
+  .info{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 210px;
+    border-radius: 50px;
   }
   .center{
     display: block;

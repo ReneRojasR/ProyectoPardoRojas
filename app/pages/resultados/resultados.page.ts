@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadosPage implements OnInit {
 
+  item: any ={
+    pic: "assets/vidal.png"
+  }
+
   constructor() { }
 
   ngOnInit() {

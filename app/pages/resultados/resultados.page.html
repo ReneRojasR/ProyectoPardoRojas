@@ -5,19 +5,13 @@
     </ion-buttons>
     <ion-title>Resultados</ion-title>
   </ion-toolbar>
-  
 </ion-header>
 
 <ion-content class="body ">
-
-  
-  <ion-list >
+  <ion-list>
     <ion-item [routerLink]="['/perfil-conductor']">
-      <ion-avatar slot="start">
-        <img src="assets\icon\vidal.png"/>
-      </ion-avatar>
+      <ion-img [src]="item.pic" class="perfil"></ion-img>
       <ion-label class="text">
-        
         <ion-container>
           <h2>CD-DG-44</h2>
           <h3>Autokalo Kagao</h3>
@@ -28,10 +22,7 @@
           <ion-icon name="star-half"></ion-icon>
           <h6>4.5 estrellas</h6>
         </ion-container>
-        
       </ion-label>
     </ion-item>
-    
   </ion-list>
-
 </ion-content>
