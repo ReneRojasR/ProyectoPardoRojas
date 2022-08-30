@@ -12,15 +12,32 @@
       <ion-label position="floating" class="text">Contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="clave" class="text"></ion-input>
     </ion-item>
+
+
+    <ion-list>
+      <ion-radio-group value="TipoUsuario">
+        <ion-item>
+          <ion-label class="text">Pasajero</ion-label>
+          <ion-radio slot="start" value="Pasajero"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label class="text">Chofer</ion-label>
+          <ion-radio slot="start" value="Chofer"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+
     <br>
     <ion-row class="ion-align-items-center">
       <ion-col>
         <ion-button strong="True" expand="full" type="submit" color="primary" shape="round"
-          [routerLink]="['/main-menu']" (click)="pasarDatos()">Aceptar
+           (click)="validar()">Aceptar
         </ion-button>
       </ion-col>
     </ion-row>
   </div>
+
   <br>
   <ion-row class="ion-align-items-center">
     <ion-col size="4"></ion-col>

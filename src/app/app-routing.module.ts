@@ -58,6 +58,14 @@ const routes: Routes = [
     path: 'perfil-conductor',
     loadChildren: () => import('./pages/perfil-conductor/perfil-conductor.module').then( m => m.PerfilConductorPageModule)
   },
+  {
+    path: 'info-chofer',
+    loadChildren: () => import('./pages/info-chofer/info-chofer.module').then( m => m.InfoChoferPageModule)
+  },
+  {
+    path: 'menu-chofer',
+    loadChildren: () => import('./pages/menu-chofer/menu-chofer.module').then( m => m.MenuChoferPageModule)
+  },
 
 ];
 
