@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-chofer',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuChoferPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.navigate(['home/perfil']);
+  }
+
+  segmentChanged($event){
+    let direccion = $event.detail.value;
+    //console.log(direccion);
+    this.router.navigate(['perfil/' + direccion]);
+  }
 
   ngOnInit() {
   }
