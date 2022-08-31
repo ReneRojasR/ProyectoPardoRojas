@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
@@ -16,7 +15,7 @@ export class MainMenuPage implements OnInit {
     pic: "assets/profile.png"
   }
 
-  constructor(public toastController: ToastController ,private router: Router, private activedRouter: ActivatedRoute) {
+  constructor(private router: Router, private activedRouter: ActivatedRoute) {
     this.activedRouter.queryParams.subscribe(params =>{
       if(this.router.getCurrentNavigation().extras.state){
         this.u = this.router.getCurrentNavigation().extras.state.usu;
@@ -24,17 +23,7 @@ export class MainMenuPage implements OnInit {
       }
     })
    }
-
   ngOnInit() {
-  }
-  pasarDatos(){
-    let navigationExtras: NavigationExtras = {
-      state: {
-        usu:this.u,
-        contra:this.c
-      }
-    }
-    this.router.navigate(['/info'], navigationExtras);
   }
 
 }

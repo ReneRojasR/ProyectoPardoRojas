@@ -1,0 +1,20 @@
+<p>
+  <h2 class="ion-text-center">Formulario</h2>
+  <p>{{ texto | uppercase }}<br>
+  {{ num | currency: 'CLP' }}</p>
+
+  <ion-item class="ion-padding-horizontal">
+    <ion-label position="stacked">Usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="user"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Nivel de Educación" [(ngModel)]="nivel">
+        <ion-select-option [value]="a.id" *ngFor="let a of niveles">{{ a.nombre }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="limpiarDatos()">Limpiar Campos</ion-button>
+</p>

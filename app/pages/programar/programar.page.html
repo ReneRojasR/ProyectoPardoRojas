@@ -5,31 +5,45 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="body">
   <div id="container">
     <br>
     <ion-list>
       <ion-item>
-        <ion-select class="text" placeholder="Seleccione su Sede de Inicio">
-          <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
+        <ion-select class="text" [(ngModel)]="sede" placeholder="Seleccione su Sede de Inicio">
           <ion-select-option value="Alameda">Alameda</ion-select-option>
           <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
-          <ion-select-option value="Educacion Continua">Educacion Continua</ion-select-option>
+          <ion-select-option value="Educación Continua">Educación Continua</ion-select-option>
+          <ion-select-option value="Maipú">Maipú</ion-select-option>
           <ion-select-option value="Maipu">Maipu</ion-select-option>
           <ion-select-option value="Melipilla">Melipilla</ion-select-option>
+          <ion-select-option value="Padre Alonso de Ovalle">Padre Alonso de Ovalle</ion-select-option>
+          <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
+          <ion-select-option value="Plaza Oeste">Plaza Oeste</ion-select-option>
+          <ion-select-option value="Plaza Vespucio">Plaza Vespucio</ion-select-option>
+          <ion-select-option value="Puente Alto">Puente Alto</ion-select-option>
+          <ion-select-option value="San Bernardo">San Bernardo</ion-select-option>
+          <ion-select-option value="San Carlos de Apoquindo">San Carlos de Apoquindo</ion-select-option>
+          <ion-select-option value="San Joaquín">San Joaquín</ion-select-option>
+          <ion-select-option value="Valparaíso">Valparaíso</ion-select-option>
+          <ion-select-option value="Viña del Mar">Viña del Mar</ion-select-option>
+          <ion-select-option value="Arauco">Arauco</ion-select-option>
+          <ion-select-option value="Nacimiento">Nacimiento</ion-select-option>
+          <ion-select-option value="San Andrés de Concepción">San Andrés de Concepción</ion-select-option>
+          <ion-select-option value="Villarrica">Villarrica</ion-select-option>
+          <ion-select-option value="Puerto Montt">Puerto Montt</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
     <br>
     <ion-item>
-      <ion-label position="floating" class="text">Ingrese su Destino</ion-label>
-      <ion-input class="text"></ion-input>
+      <ion-label position="floating"  class="text">Ingrese su Destino</ion-label>
+      <ion-input class="text" [(ngModel)]="destino"></ion-input>
     </ion-item>
     <br>
     <ion-list>
       <ion-item>
-        <ion-select class="text" placeholder="Seleccione el numero de asientos disponibles">
+        <ion-select class="text" [(ngModel)]="asientos" placeholder="Seleccione el numero de asientos disponibles">
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
           <ion-select-option value="3">3</ion-select-option>
@@ -41,12 +55,12 @@
     </ion-list>
     <br>
     <ion-item>
-      <ion-label position="floating" class="text">Ingrese el precio $</ion-label>
-      <ion-input class="text"></ion-input>
+      <ion-label position="floating"  class="text">Ingrese el precio $</ion-label>
+      <ion-input class="text" [(ngModel)]="precio"></ion-input>
     </ion-item>
     <br>
     <ion-button strong="True" expand="full" type="submit" color="primary" shape="round"
-    [routerLink]="['/succes']">Aceptar</ion-button>
+    (click)="validar()">Aceptar</ion-button>
     <br>
     <ion-button class="center" strong="True" type="submit" color="secondary" shape="round"
     [routerLink]="['/main-menu']">Cancelar</ion-button>

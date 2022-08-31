@@ -9,11 +9,8 @@
 <ion-content class="body ">
   <div id="container">
     <br>
-    <ion-img [src]="item.pic" class="perfil" [routerLink]="['/info']" (click)="pasarDatos()"></ion-img>
-    <a>
-      {{ u }}
-      {{ c }}
-    </a>
+    <ion-img [src]="item.pic" class="perfil" [routerLink]="['/info']"></ion-img>
+    <br>
     <br>
     <ion-button expand="block" shape="round" color="primary" [routerLink]="['/programar']">Programar Viaje</ion-button>
     <br>

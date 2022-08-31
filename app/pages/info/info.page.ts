@@ -8,10 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class InfoPage implements OnInit {
   
-  m: string = "";
-  n: string = "";
-  s: string = "";
-  
+  m: string = "enrique.mallea@duocuc.cl";
+  n: string = "9 7640 1965";
+  s: string = "Plaza Norte";
+  v: string = "---";  
+
   item: any ={
     pic: "assets/profile.png"
   }
@@ -20,8 +21,9 @@ export class InfoPage implements OnInit {
     this.activedRouter.queryParams.subscribe(params =>{
       if(this.router.getCurrentNavigation().extras.state){
         this.m = this.router.getCurrentNavigation().extras.state.mail;
-        this.n = this.router.getCurrentNavigation().extras.state.number;
-        this.s = this.router.getCurrentNavigation().extras.state.sede1
+        this.n = this.router.getCurrentNavigation().extras.state.num;
+        this.s = this.router.getCurrentNavigation().extras.state.sede1;
+        this.v = this.router.getCurrentNavigation().extras.state.vehiculo;
       }
     })
   }

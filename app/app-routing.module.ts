@@ -48,10 +48,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/edit-vehiculo/edit-vehiculo.module').then( m => m.EditVehiculoPageModule)
   },
   {
-    path: 'add-vehiculo',
-    loadChildren: () => import('./pages/add-vehiculo/add-vehiculo.module').then( m => m.AddVehiculoPageModule)
-  },
-  {
     path: 'edit-perfil',
     loadChildren: () => import('./pages/edit-perfil/edit-perfil.module').then( m => m.EditPerfilPageModule)
   },

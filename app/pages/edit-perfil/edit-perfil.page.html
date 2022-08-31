@@ -10,27 +10,25 @@
     <br>
     <ion-img [src]="item.pic" class="perfil"></ion-img>
     <ion-item>
-      <ion-label class="text" position="floating">Ingrese su Nombre</ion-label>
-      <ion-input class="text"></ion-input>
+      <ion-label class="text" position="floating">Ingrese su Correo</ion-label>
+      <ion-input class="text" [(ngModel)]="correo"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="text" position="floating">Ingrese su Apellido</ion-label>
-      <ion-input class="text"></ion-input>
+      <ion-label class="text" position="floating">Ingrese su Numero (8 digitos)</ion-label>
+      <ion-input class="text" [(ngModel)]="numero"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label class="text" position="floating">Ingrese su Numero</ion-label>
-      <ion-input class="text"></ion-input>
-    </ion-item>
+    <br>
     <ion-list>
       <ion-item>
-        <ion-select class="text" placeholder="Vehiculo">
-          <ion-select-option value="1">KC YS 76</ion-select-option>
+        <ion-select class="text" [(ngModel)]="vehiculo" placeholder="Vehiculo">
+          <ion-select-option value="Auto">Auto</ion-select-option>
+          <ion-select-option value="Moto">Moto</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
     <ion-list>
       <ion-item>
-        <ion-select class="text" placeholder="Seleccione su Sede">
+        <ion-select class="text" [(ngModel)]="sede" placeholder="Seleccione su Sede">
           <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
           <ion-select-option value="Alameda">Alameda</ion-select-option>
           <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
@@ -40,9 +38,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <ion-button shape="round" expand="block" color="primary" [routerLink]="['/info']">
+    <br>
+    <ion-button shape="round" expand="block" color="primary" (click)="validar()">
       Aceptar</ion-button>
-    <ion-button shape="round" expand="block" color="secondary" [routerLink]="['/add-vehiculo']">
-      Añadir vehiculo</ion-button>
   </div>
 </ion-content>
