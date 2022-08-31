@@ -11,23 +11,25 @@
   <ion-img [src]="item.pic" class="perfil"></ion-img>
   <ion-card class="card">
     <ion-card-header>
-      <ion-card-title class="text2">Enrique Mallea</ion-card-title>
+      <ion-card-title class="text2">{{ m }}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
       <ion-list>
         <ion-item>
-          <ion-label>Sede: Plaza Norte</ion-label>
+          <ion-label>Sede: {{ s }}</ion-label>
         </ion-item>
         <br>
         <ion-item>
-          <ion-label>Numero: 9 7640 1965</ion-label>
+          <ion-label>Numero: {{ n }}</ion-label>
         </ion-item>
         <br>
         <ion-item>
-          <ion-label>Vehìculo: Motocicleta</ion-label>
+          <ion-label >Vehìculo: {{ v }}</ion-label>
+          <ion-icon [routerLink]="['/edit-vehiculo']" name="arrow-forward-outline"></ion-icon>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
+  <ion-button expand="block" shape="round" color="secondary" [routerLink]="['/edit-perfil']">
+    Editar perfil</ion-button>
 </ion-content>

@@ -11,6 +11,8 @@ export class LoginPage implements OnInit {
 
   usuario: string;
   clave: string;
+  default1: string = "enrique.mallea@duocuc.cl";
+  default2: string = "Sushicoreano1";
 
   item: any ={
     pic: "assets/waypoint.png"
@@ -23,7 +25,7 @@ export class LoginPage implements OnInit {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Registro exitoso',
+      message: 'Inicio de sesión exitoso',
       duration: 2000
     });
     toast.present();
@@ -47,27 +49,13 @@ export class LoginPage implements OnInit {
         contra:this.clave
       }
     }
-    let re = /@duocuc.cl/;
-
-    if(re.test(this.usuario)==false){
-      this.presentAlert();
-    }
-    else if(!this.clave){
-      this.presentAlert();
-    }
-    else if(this.usuario.length<14){
-      this.presentAlert();
-    }
-    else if(this.clave.length<8){
-      this.presentAlert();
-    }
-    else{
+    if(this.clave==this.default2 && this.usuario==this.default1){
       this.presentToast();
       this.router.navigate(['/main-menu'], navigationExtras);
+    }
+    else{
+      this.presentAlert();
     }
   }
 // ME QUIERON PURO MATAR HERMANO, ME DEMORÉ COMO 3 HORAS EN HACER LAS VALIDACIONES
 }
-
-  
-
