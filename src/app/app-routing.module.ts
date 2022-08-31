@@ -48,25 +48,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/edit-vehiculo/edit-vehiculo.module').then( m => m.EditVehiculoPageModule)
   },
   {
-    path: 'add-vehiculo',
-    loadChildren: () => import('./pages/add-vehiculo/add-vehiculo.module').then( m => m.AddVehiculoPageModule)
-  },
-  {
     path: 'edit-perfil',
     loadChildren: () => import('./pages/edit-perfil/edit-perfil.module').then( m => m.EditPerfilPageModule)
-  },  {
+  },
+  {
     path: 'perfil-conductor',
     loadChildren: () => import('./pages/perfil-conductor/perfil-conductor.module').then( m => m.PerfilConductorPageModule)
   },
-  {
-    path: 'info-chofer',
-    loadChildren: () => import('./pages/info-chofer/info-chofer.module').then( m => m.InfoChoferPageModule)
-  },
-  {
-    path: 'menu-chofer',
-    loadChildren: () => import('./pages/menu-chofer/menu-chofer.module').then( m => m.MenuChoferPageModule)
-  },
-
 ];
 
 @NgModule({
