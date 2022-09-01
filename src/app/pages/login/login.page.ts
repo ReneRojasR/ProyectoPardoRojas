@@ -57,5 +57,5 @@ export class LoginPage implements OnInit {
       this.presentAlert();
     }
   }
-// ME QUIERON PURO MATAR HERMANO, ME DEMORÉ COMO 3 HORAS EN HACER LAS VALIDACIONES
+// 
 }

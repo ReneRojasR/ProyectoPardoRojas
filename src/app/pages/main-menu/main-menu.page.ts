@@ -23,6 +23,13 @@ export class MainMenuPage implements OnInit {
       }
     })
    }
+
+   segmentChanged($event){
+    let direccion = $event.detail.value;
+    //console.log(direccion);
+    this.router.navigate(['main-menu/' + direccion]);
+  }
+
   ngOnInit() {
   }
 

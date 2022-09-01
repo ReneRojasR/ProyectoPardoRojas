@@ -1,10 +1,4 @@
-<ion-header class="body">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button>Volver</ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content class="body">
   <div>
@@ -35,6 +29,6 @@
     (click)="validar()">Aceptar</ion-button>
     <br>
     <ion-button class="center" strong="True" type="submit" color="secondary" shape="round"
-    (click)="limpiarDatos()">Limpiar</ion-button>
+    [routerLink]="['/main-menu']">Cancelar</ion-button>
   </div>
 </ion-content>

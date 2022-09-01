@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { MainMenuPageRoutingModule } from './main-menu-routing.module';
 
 import { MainMenuPage } from './main-menu.page';
+import { MisdatoscComponent } from 'src/app/components/misdatosc/misdatosc.component';
+import { MapaCComponent } from 'app/components/mapa-c/mapa-c.component';
+import { ViajeComponent } from 'src/app/components/viaje/viaje.component';
 
 @NgModule({
   imports: [
@@ -15,6 +18,6 @@ import { MainMenuPage } from './main-menu.page';
     IonicModule,
     MainMenuPageRoutingModule
   ],
-  declarations: [MainMenuPage]
+  declarations: [MainMenuPage,MisdatoscComponent,MapaCComponent,ViajeComponent]
 })
 export class MainMenuPageModule {}

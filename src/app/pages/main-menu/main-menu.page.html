@@ -4,10 +4,25 @@
       <ion-back-button>Volver</ion-back-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)" value="misdatos">
+      <ion-segment-button value="misdatos">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="mapa-c">
+        <ion-icon name="map-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="viaje">
+        <ion-icon name="car-sport-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="body ">
-  <div id="container">
+  <!---
+     <div id="container">
     <br>
     <ion-img [src]="item.pic" class="perfil" [routerLink]="['/info']"></ion-img>
     <br>
@@ -16,4 +31,8 @@
     <br>
     <ion-button expand="block" color="secondary" shape="round" [routerLink]="['/buscar']">Buscar vehiculo</ion-button>
   </div>
+    --->
+ 
+  <ion-router-outlet></ion-router-outlet>
+
 </ion-content>
