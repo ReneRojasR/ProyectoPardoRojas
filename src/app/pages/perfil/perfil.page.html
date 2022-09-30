@@ -1,12 +1,29 @@
-<ion-header>
+<ion-header class="body">
   <ion-toolbar>
-    <ion-title>perfil</ion-title>
     <ion-buttons slot="start">
       <ion-back-button>Volver</ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="body">
   
+  <h2 class="title">¿Tienes la memoria de un pez?</h2>
+  <h5 class="title2"> No te preocupes</h5>
+  <h5 class="title2">solo ingresa tu correo electronico y te enviaremos un codigo para restablecer tu contraseña</h5>
+  <br>
+  <ion-item>
+    <ion-label position="floating" class="text">Ingresa tu coreo:</ion-label>
+    <ion-input [(ngModel)]="mail2" class="text"></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <ion-button strong="True" expand="full" color="primary" shape="round" (click)="enviar()">Enviar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+
 </ion-content>

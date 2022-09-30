@@ -2,11 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
+
+interface Food {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-edit-perfil',
   templateUrl: './edit-perfil.page.html',
   styleUrls: ['./edit-perfil.page.scss'],
 })
+
 export class EditPerfilPage implements OnInit {
   item: any ={
     pic: "assets/profile.png"
@@ -14,13 +20,20 @@ export class EditPerfilPage implements OnInit {
   correo: string;
   sede: string;
   numero: string;
-  vehiculo: string;
 
+  foods: Food[] = [
+    {value: 'Alameda', viewValue: 'Alameda'},
+    {value: 'Antonio Varas', viewValue: 'Antonio Varas'},
+    {value: 'Educación Continua', viewValue: 'Educación Continua'},
+    {value: 'Maipú', viewValue: 'Maipú'},
+    {value: 'Plaza Norte', viewValue: 'Plaza Norte'},
+  ];
 
   constructor(public toastController: ToastController, private router: Router,private alertController: AlertController) { }
 
   ngOnInit() {
   }
+  
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Cambio exitoso!',
@@ -46,6 +59,15 @@ export class EditPerfilPage implements OnInit {
     });
     await alert.present();
   }
+  async presentAlert2() {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      subHeader: 'Tiene que llenar todos los campos',
+      message: 'Intente de nuevo',
+      buttons: ['OK'],
+    });
+    await alert.present();
+  }
   async presentAlert3() {
     const alert = await this.alertController.create({
       header: 'Error',
@@ -61,7 +83,6 @@ export class EditPerfilPage implements OnInit {
         mail:this.correo,
         num:this.numero,
         sede1:this.sede,
-        vehiculo:this.vehiculo
       }
     }
     let re = /@duocuc.cl/;
@@ -73,7 +94,7 @@ export class EditPerfilPage implements OnInit {
     else if(this.correo.length<14){
       this.presentAlert();
     }
-    else if (!this.sede){
+    else if (this.foods.values.length<1){
       this.presentAlert1();
     }
     else if(num.test(this.numero)==false){
@@ -84,7 +105,7 @@ export class EditPerfilPage implements OnInit {
     }
     else{
       this.presentToast();
-      this.router.navigate(['/info'], navigationExtras);
+      this.router.navigate(['/main-menu'], navigationExtras);
     }
   }
 }

@@ -59,11 +59,21 @@ export class EditVehiculoPage implements OnInit {
 
     let pat = /[QWERTYUIOPASDFGHJKLÑZXCVBNM]/
     let pat2 = /[1234567890]/
+    let pat3 = /[qwertyuiopasdfghjklñzxcvbnm]/
 
     if(!this.vehi || !this.patente){
       this.presentAlert();
     }
-    else if(!pat.test(this.patente) && !pat2.test(this.patente)){
+    else if(!pat.test(this.patente)){
+      this.presentAlert1();
+    }
+    else if(!pat2.test(this.patente)){
+      this.presentAlert1();
+    }
+    else if(pat3.test(this.patente)){
+      this.presentAlert1();
+    }
+    else if(this.patente.length!=6){
       this.presentAlert1();
     }
     else if(!this.marca || !this.asientos){
@@ -71,7 +81,7 @@ export class EditVehiculoPage implements OnInit {
     }
     else{
       this.presentToast();
-      this.router.navigate(['/info'], navigationExtras);
+      this.router.navigate(['/main-menu'], navigationExtras);
     }
   }
 

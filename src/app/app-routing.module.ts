@@ -55,6 +55,18 @@ const routes: Routes = [
     path: 'perfil-conductor',
     loadChildren: () => import('./pages/perfil-conductor/perfil-conductor.module').then( m => m.PerfilConductorPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'enable',
+    loadChildren: () => import('./pages/enable/enable.module').then( m => m.EnablePageModule)
+  },
+  {
+    path: 'unabled',
+    loadChildren: () => import('./pages/unabled/unabled.module').then( m => m.UnabledPageModule)
+  },
 ];
 
 @NgModule({

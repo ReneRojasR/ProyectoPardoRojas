@@ -1,0 +1,42 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <br>
+  <ion-card class="card3">
+    <ion-card-header>
+      <ion-card-title class="text2">Viaje Programado!!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label> Destino: {{ d }} </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Precio Asiento: {{ p }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label >Desde: {{ s }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Hora Salida: {{ h }} {{am}} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Numero Asientos: {{ a }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Precio Asiento: {{ p | currency: 'CLP' }} </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" shape="round" color="secondary" [routerLink]="['/main-menu']">
+    Volver al menu</ion-button>
+</ion-content>

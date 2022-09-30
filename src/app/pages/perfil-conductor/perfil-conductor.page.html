@@ -14,7 +14,7 @@
       <ion-img [src]="item.pic2" class="info"></ion-img>
       <label for="" class="text3">Marca: Honda</label><br>
       <label for="" class="text3">Modelo: F250</label><br>
-      <label for="" class="text3">Color: Naranja</label>
+      <label for="" class="text3">Precio : {{ p | currency: 'CLP' }} </label>
     </ion-card-content>
   </ion-card>
 
@@ -25,4 +25,6 @@
       <label for="" class="text3">Nombre: Arturo Vidal</label>
     </ion-card-content>
   </ion-card>
+  <ion-button strong="True" expand="full" type="submit" color="secondary" shape="round"
+  (click)="alerta()" [routerLink]="['/main-menu']">Reservar</ion-button>
 </ion-content>

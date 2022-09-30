@@ -1,0 +1,63 @@
+:root {
+  --ion-color-primary: #38ff26;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #64f89d;
+  --ion-color-primary-tint: #49d478;
+
+  --ion-color-secondary: #4631ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #3d71e0;
+  --ion-color-secondary-tint: #5350ff;
+
+  /** tertiary **/
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  .body {
+    --ion-background-color: rgb(21, 22, 21);
+  }
+
+  .card {
+    --ion-background-color: #38ff26;
+    --ion-color-primary-shade: #322eff;
+  }
+
+  .text {
+    color: white;
+  }
+
+  .text2 {
+    color: #000000;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .logo {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .center {
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}

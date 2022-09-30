@@ -1,0 +1,51 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <br>
+  <ion-img [src]="item.pic" class="perfil"></ion-img>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="text2">{{ m }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Sede: {{ s }}</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Numero: {{ n }}</ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Vehìculo: {{ v }}</ion-label>
+          <ion-icon [routerLink]="['/edit-vehiculo']"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <h1 class="text2" strong="True">Vehiculo</h1>
+      <ion-img [src]="item.pic3" class="info"></ion-img>
+      <label  class="text3">Marca: Honda</label><br>
+      <label  class="text3">Modelo: F250</label><br>
+      <label  class="text3">Precio : {{ p | currency: 'CLP' }} </label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <h1 class="text2" strong="True">Conductor</h1>
+      <ion-img [src]="item.pic2" class="perfil2"></ion-img>
+      <label class="text3">Nombre: Arturo Vidal</label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

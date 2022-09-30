@@ -119,7 +119,7 @@ export class RegistroPage implements OnInit {
     }
     else{
       this.presentToast();
-      this.router.navigate(['/info'], navigationExtras);
+      this.router.navigate(['/main-menu'], navigationExtras);
     }
   }
 }

@@ -1,0 +1,34 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <h2 class="ion-text-center text">Listado de Usuarios Deshabilitados</h2>
+
+  <ion-searchbar class="text" placeholder="Buscar Usuario" (ionInput)="obtenerTexto($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          <h2 class="text">Nombre Usuario</h2>
+          <p class="text" style="word-wrap: break-word;white-space: normal;">Datos</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option [routerLink]="['/enable']">
+          <ion-icon slot="bottom" name="pencil-sharp" ></ion-icon>
+          Ver Perfil
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="bottom" name="trash"></ion-icon>
+          Habilitar
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

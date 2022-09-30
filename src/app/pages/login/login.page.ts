@@ -9,12 +9,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  usuario: string;
-  clave: string;
-  default1: string = "enrique.mallea@duocuc.cl";
-  default2: string = "Sushicoreano1";
-
-  item: any ={
+  item: any = {
     pic: "assets/waypoint.png"
   }
 
@@ -26,7 +21,7 @@ export class LoginPage implements OnInit {
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Inicio de sesión exitoso',
-      duration: 2000
+      duration: 500
     });
     toast.present();
   }
@@ -41,21 +36,15 @@ export class LoginPage implements OnInit {
 
     await alert.present();
   }
-
-  validar(){
-    let navigationExtras: NavigationExtras = {
-      state: {
-        usu:this.usuario,
-        contra:this.clave
-      }
-    }
-    if(this.clave==this.default2 && this.usuario==this.default1){
-      this.presentToast();
-      this.router.navigate(['/main-menu'], navigationExtras);
-    }
-    else{
-      this.presentAlert();
-    }
+  admin(){
+    let navigationExtras: NavigationExtras = {}
+    this.presentToast();
+    this.router.navigate(['/admin'], navigationExtras);
   }
-// 
+
+  validar() {
+    let navigationExtras: NavigationExtras = {}
+    this.presentToast();
+    this.router.navigate(['/main-menu'], navigationExtras);
+  }
 }

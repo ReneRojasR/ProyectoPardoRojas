@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MapaCComponent } from 'app/components/mapa-c/mapa-c.component';
-import { MisDatosComponent } from 'app/components/mis-datos/mis-datos.component';
+import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 import { MisdatoscComponent } from 'src/app/components/misdatosc/misdatosc.component';
 import { ViajeComponent } from 'src/app/components/viaje/viaje.component';
 
@@ -19,8 +18,8 @@ const routes: Routes = [
 
       },
       {
-        path: 'mapa-c',
-        component: MapaCComponent
+        path: 'mapa',
+        component: MapaComponent
       },
       {
         path: 'viaje',

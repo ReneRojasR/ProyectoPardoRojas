@@ -8,7 +8,6 @@
 <ion-content class="body">
   <div id="container">
     <br>
-    <ion-img [src]="item.pic" class="perfil"></ion-img>
     <ion-item>
       <ion-label class="text" position="floating">Ingrese su Correo</ion-label>
       <ion-input class="text" [(ngModel)]="correo"></ion-input>
@@ -18,30 +17,24 @@
       <ion-input class="text" [(ngModel)]="numero"></ion-input>
     </ion-item>
     <br>
-    <ion-list>
-      <ion-item>
-        <ion-select class="text" [(ngModel)]="vehiculo" placeholder="Vehiculo">
-          <ion-select-option value="Auto">Auto</ion-select-option>
-          <ion-select-option value="Moto">Moto</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    <ion-list>
-      <ion-item>
-        <ion-select class="text" [(ngModel)]="sede" placeholder="Seleccione su Sede">
-          <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
-          <ion-select-option value="Alameda">Alameda</ion-select-option>
-          <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
-          <ion-select-option value="Educacion Continua">Educacion Continua</ion-select-option>
-          <ion-select-option value="Maipu">Maipu</ion-select-option>
-          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
+
+
+    <!--Cambiar animacion a cosas visuales, no para usar datos o variables-->
+    <mat-form-field appearance="fill">
+      <ion-label class="text" position="floating">Sede</ion-label>
+      <mat-select class="text">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!--Cambiar animacion a cosas visuales, no para usar datos o variables-->
+
+    
     <br>
     <ion-button shape="round" expand="block" color="primary" (click)="validar()">
-    Aceptar</ion-button>
-    
-      <ion-button shape="round" expand="block" color="warning" [routerLink]="['/main-menu']">Cancelar</ion-button>
+      Aceptar</ion-button>
+    <br>
+    <ion-button shape="round" expand="block" color="secondary" [routerLink]="['/main-menu']">Cancelar</ion-button>
   </div>
 </ion-content>

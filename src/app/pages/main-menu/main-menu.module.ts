@@ -8,8 +8,8 @@ import { MainMenuPageRoutingModule } from './main-menu-routing.module';
 
 import { MainMenuPage } from './main-menu.page';
 import { MisdatoscComponent } from 'src/app/components/misdatosc/misdatosc.component';
-import { MapaCComponent } from 'app/components/mapa-c/mapa-c.component';
 import { ViajeComponent } from 'src/app/components/viaje/viaje.component';
+import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 
 @NgModule({
   imports: [
@@ -18,6 +18,6 @@ import { ViajeComponent } from 'src/app/components/viaje/viaje.component';
     IonicModule,
     MainMenuPageRoutingModule
   ],
-  declarations: [MainMenuPage,MisdatoscComponent,MapaCComponent,ViajeComponent]
+  declarations: [MainMenuPage,MisdatoscComponent,MapaComponent,ViajeComponent]
 })
 export class MainMenuPageModule {}

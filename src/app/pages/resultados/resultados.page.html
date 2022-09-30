@@ -9,7 +9,7 @@
 
 <ion-content class="body ">
   <ion-list>
-    <ion-item [routerLink]="['/perfil-conductor']">
+    <ion-item (click)="pasar()">
       <ion-img [src]="item.pic" class="perfil"></ion-img>
       <ion-label class="text">
         <ion-container>
@@ -21,6 +21,7 @@
           <ion-icon name="star"></ion-icon>
           <ion-icon name="star-half"></ion-icon>
           <h6>4.5 estrellas</h6>
+          <h6> {{ p   |  currency: 'CLP' }} </h6>
         </ion-container>
       </ion-label>
     </ion-item>
