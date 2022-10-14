@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
+import { AutobdService } from '../../services/autobd.service';
 
 @Component({
   selector: 'app-perfil-conductor',
@@ -9,18 +10,36 @@ import { ToastController } from '@ionic/angular';
 })
 export class PerfilConductorPage implements OnInit {
 
-  item: any ={
+  item: any = {
     pic: "assets/vidal.png",
     pic2: "assets/car1.jpg"
   }
   p: string;
 
-  constructor(public toastController: ToastController,private router: Router,private activedRouter: ActivatedRoute) {
+  arregloAuto: any =[
+    {
+      patente: '',
+      modelo: '',
+      anio: '',
+      //user_id: '',
+      //marca: '',
+    }
+  ]
+  constructor(private servicioBD: AutobdService,public toastController: ToastController, private router: Router, private activedRouter: ActivatedRoute,private alertController: AlertController) {
     this.activedRouter.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.p = this.router.getCurrentNavigation().extras.state.precio;
       }
     });
+  }
+  async ngOnInit() {
+    this.servicioBD.dbState().subscribe(res => {
+      if (res) {
+        this.servicioBD.fetchAuto().subscribe(res => {
+          this.arregloAuto = res;
+        })
+      }
+    })
   }
 
   async presentToast() {
@@ -30,10 +49,7 @@ export class PerfilConductorPage implements OnInit {
     });
     toast.present();
   }
-  alerta(){
+  alerta() {
     this.presentToast();
   }
-  ngOnInit() {
-  }
-
 }

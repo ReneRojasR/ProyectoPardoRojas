@@ -1,0 +1,36 @@
+<ion-header class="body">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <br>
+  <br>
+  <br>
+  <br>
+  <ion-card class="card3">
+    <ion-card-header>
+      <ion-card-title class="text2">Informacion del Viaje</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <ion-list *ngFor="let a of arreglo" >
+        <ion-item>
+          <ion-label> Destino:</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Hora Salida: </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Numero Asientos:</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label >Precio Asiento:  </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-button shape="round" class="center" color="secondary" [routerLink]="['/main-menu']">Cancelar reserva</ion-button>
+</ion-content>

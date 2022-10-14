@@ -43,15 +43,15 @@ $app-theme: mat.define-light-theme((
   .card {
     --ion-background-color: #42ee33;
     --ion-color-primary-shade: #322eff;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 260px;
+    margin-left: 35px;
+    margin-right: 35px;
+    height: 350px;
   }
   .card2 {
     --ion-background-color: #42ee33;
     --ion-color-primary-shade: #322eff;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   .card3 {
     --ion-background-color: #42ee33;
@@ -122,9 +122,14 @@ $app-theme: mat.define-light-theme((
     margin-left: 15%;
     margin-right: 15%;
   }
+  .center3{
+    display: block;
+    margin-left: 40%;
+    margin-right: 30%;
+  }
   .center2{
     display: block;
-    margin-left: 35%;
+    margin-left: auto;
     margin-right: auto;
   }
   .icono{

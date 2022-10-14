@@ -1,11 +1,9 @@
-import * as internal from "stream";
 
 export class Usuariobd {
     idUsuario: number;
-    rutUsuario: String;
-    nombreUsuario: String;
-    apellidosUsuario: String;
-    correoUsuario: String;
+    nombre_Usuario: String;
     claveUsuario: String;
-    rolIdRol: number;
+    sedeUsuario: string;
+    //rolIdRol: number;
+    state: number;
 }

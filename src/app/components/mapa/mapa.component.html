@@ -2,28 +2,8 @@
   <div id="container">
     <ion-list>
       <ion-item>
-        <ion-select class="text" [(ngModel)]="sede" placeholder="Seleccione su Sede de Inicio">
-          <ion-select-option value="Alameda">Alameda</ion-select-option>
-          <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
-          <ion-select-option value="Educación Continua">Educación Continua</ion-select-option>
-          <ion-select-option value="Maipú">Maipú</ion-select-option>
-          <ion-select-option value="Maipu">Maipu</ion-select-option>
-          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
-          <ion-select-option value="Padre Alonso de Ovalle">Padre Alonso de Ovalle</ion-select-option>
-          <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
-          <ion-select-option value="Plaza Oeste">Plaza Oeste</ion-select-option>
-          <ion-select-option value="Plaza Vespucio">Plaza Vespucio</ion-select-option>
-          <ion-select-option value="Puente Alto">Puente Alto</ion-select-option>
-          <ion-select-option value="San Bernardo">San Bernardo</ion-select-option>
-          <ion-select-option value="San Carlos de Apoquindo">San Carlos de Apoquindo</ion-select-option>
-          <ion-select-option value="San Joaquín">San Joaquín</ion-select-option>
-          <ion-select-option value="Valparaíso">Valparaíso</ion-select-option>
-          <ion-select-option value="Viña del Mar">Viña del Mar</ion-select-option>
-          <ion-select-option value="Arauco">Arauco</ion-select-option>
-          <ion-select-option value="Nacimiento">Nacimiento</ion-select-option>
-          <ion-select-option value="San Andrés de Concepción">San Andrés de Concepción</ion-select-option>
-          <ion-select-option value="Villarrica">Villarrica</ion-select-option>
-          <ion-select-option value="Puerto Montt">Puerto Montt</ion-select-option>
+        <ion-select class="text" [(ngModel)]="sede" placeholder="Seleccione su Comuna de Inicio">
+          <ion-select-option *ngFor="let a of arreglo" [value]="a"> {{ a.nombreComuna }} </ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>

@@ -1,27 +1,39 @@
 <ion-content class="body">
   <br>
+  <br>
   <ion-img [src]="item.pic" class="perfil"></ion-img>
-  <ion-card class="card">
+  <br>
+  <br>
+  <ion-card *ngFor="let u of arrelgoUser" class="card">
     <ion-card-header>
-      <ion-card-title class="text2">{{ m }}</ion-card-title>
+      <ion-card-title  class="text2">{{ u.nombre_Usuario }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-list>
         <ion-item>
-          <ion-label>Sede: {{ s }}</ion-label>
-        </ion-item>
-        <br>
-        <ion-item>
-          <ion-label>Numero: {{ n }}</ion-label>
+          <ion-label>Sede: {{ u.sedeUsuario }}</ion-label>
         </ion-item>
         <br>
         <ion-item>
           <ion-label >Vehìculo: {{ v }}</ion-label>
           <ion-icon  [routerLink]="['/edit-vehiculo']"  name="arrow-forward-outline"></ion-icon>
         </ion-item>
+        <br>
+        <ion-item> 
+          <ion-label >Viajes reservados</ion-label>
+          <ion-icon  [routerLink]="['/detalle-viaje']"  name="arrow-forward-outline"></ion-icon>
+        </ion-item>
+        <br>
+        <ion-item> 
+          <ion-label >Viajes Programados</ion-label>
+          <ion-icon  [routerLink]="['/info']"  name="arrow-forward-outline"></ion-icon>
+        </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
-  <ion-button expand="block" shape="round" color="secondary" [routerLink]="['/edit-perfil']">
+  <br>
+  <br>
+  <br>
+  <ion-button class="center" shape="round" color="secondary" [routerLink]="['/edit-perfil']">
     Editar perfil</ion-button>
 </ion-content>

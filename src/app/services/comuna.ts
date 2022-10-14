@@ -1,4 +1,4 @@
 export class Comuna {
     idComuna: number;
-    nombreComuna: String;
+    nombreComuna: string;
 }

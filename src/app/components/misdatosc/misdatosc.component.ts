@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
+import { UsuariobdService } from '../../services/usuariobd.service';
 
 @Component({
   selector: 'app-misdatosc',
@@ -8,26 +10,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MisdatoscComponent implements OnInit {
 
-  m: string = "enrique.mallea@duocuc.cl";
-  n: string = "9 7640 1965";
-  s: string = "Plaza Norte";
-  v: string = "---";  
+  arrelgoUser: any = [
+    {
+      idUsuario: '',
+      nombre_Usuario: '',
+      claveUsuario: '',
+      sedeUsuario:'',
+      //rolIdRol: '',
+      state: '',
+    }
+  ]
 
-  item: any ={
+  item: any = {
     pic: "assets/profile.png"
   }
 
-  constructor(private router: Router, private activedRouter: ActivatedRoute) { 
-    this.activedRouter.queryParams.subscribe(params =>{
-      if(this.router.getCurrentNavigation().extras.state){
-        this.m = this.router.getCurrentNavigation().extras.state.mail;
-        this.n = this.router.getCurrentNavigation().extras.state.num;
-        this.s = this.router.getCurrentNavigation().extras.state.sede1;
-        this.v = this.router.getCurrentNavigation().extras.state.vehiculo;
+  constructor(private servicioBD: UsuariobdService, public toastController: ToastController, private router: Router, private activedRouter: ActivatedRoute, private alertController: AlertController) { }
+  //******************BD******************//
+  async ngOnInit() {
+    this.servicioBD.dbState().subscribe(res => {
+      if (res) {
+        this.servicioBD.fetchUsuario().subscribe(res => {
+          this.arrelgoUser = res;
+        })
       }
     })
   }
-
-  ngOnInit() {}
-
 }

@@ -8,23 +8,25 @@
 </ion-header>
 
 <ion-content class="body">
-  <ion-card class="card2">
+  <ion-card *ngFor="let a of arregloAuto" class="card">
     <ion-card-content>
       <h1 class="text2" strong="True">Vehiculo</h1>
       <ion-img [src]="item.pic2" class="info"></ion-img>
-      <label for="" class="text3">Marca: Honda</label><br>
-      <label for="" class="text3">Modelo: F250</label><br>
-      <label for="" class="text3">Precio : {{ p | currency: 'CLP' }} </label>
+      <label for="" class="text3">Patente: {{ a.patente }}</label><br>
+      <label for="" class="text3">Modelo: {{ a.modelo }} </label><br>
+      <label for="" class="text3">año : {{ a.anio }} </label>
     </ion-card-content>
   </ion-card>
-
-  <ion-card class="card2">
+  <br>
+  <ion-card class="card">
     <ion-card-content>
       <h1 class="text2" strong="True">Conductor</h1>
       <ion-img [src]="item.pic" class="perfil2"></ion-img>
       <label for="" class="text3">Nombre: Arturo Vidal</label>
     </ion-card-content>
   </ion-card>
-  <ion-button strong="True" expand="full" type="submit" color="secondary" shape="round"
+  <br>
+  <br>
+  <ion-button strong="True" class="center" type="submit" color="secondary" shape="round"
   (click)="alerta()" [routerLink]="['/main-menu']">Reservar</ion-button>
 </ion-content>

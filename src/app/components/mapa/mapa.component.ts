@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
+import { ComunabdService } from '../../services/comunabd.service';
 
 @Component({
   selector: 'app-mapa',
@@ -15,11 +16,25 @@ export class MapaComponent implements OnInit {
   precio: string;
   hora: string;
   horaM: string;
-  
-  constructor(public toastController: ToastController, private router: Router, private alertController: AlertController) { }
 
-  ngOnInit() {
+  arreglo: any = [
+    {
+      idComuna: '',
+      nombreComuna: ''
+    }
+  ]
+  constructor(private servicioBD: ComunabdService,public toastController: ToastController, private router: Router, private alertController: AlertController) { }
+  //******************BD******************//
+  async ngOnInit() {
+    this.servicioBD.dbState().subscribe(res => {
+      if (res) {
+        this.servicioBD.fetchComuna().subscribe(res => {
+          this.arreglo = res;
+        })
+      }
+    })
   }
+  //******************BD******************//
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Viaje guardado de forma exitosa!',

@@ -1,10 +1,8 @@
-import { Time } from "@angular/common";
-
 export class Viaje {
     idViaje: number;
-    fechaViaje: Date;
-    horaSalida: Time;
+    destino: string;
+    horaSalida: number;
     asientosDisponible: number;
     montoViaje: number;
-    autoPatente: String;
+    //autoPatente: String;
 }

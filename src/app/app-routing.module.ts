@@ -67,6 +67,14 @@ const routes: Routes = [
     path: 'unabled',
     loadChildren: () => import('./pages/unabled/unabled.module').then( m => m.UnabledPageModule)
   },
+  {
+    path: 'detalle-viaje',
+    loadChildren: () => import('./pages/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
+  },
+  {
+    path: 'detalle-viaje1',
+    loadChildren: () => import('./pages/detalle-viaje1/detalle-viaje1.module').then( m => m.DetalleViaje1PageModule)
+  }
 ];
 
 @NgModule({

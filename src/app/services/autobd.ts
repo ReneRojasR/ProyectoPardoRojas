@@ -1,6 +1,7 @@
 export class Autobd {
-    patente: String;
-    marca: String;
-    modelo: String;
-    anio: number;
+    patenteAuto: string;
+    modeloAuto: string;
+    yearAuto: number;
 }
+//user_id: number;
+//marca: String;
